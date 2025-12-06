@@ -1,0 +1,51 @@
+name: OPEN GATE CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog gtkwave cocotb coq
+          pip install cocotb pytest
+
+      - name: Run Coq proofs
+        run: make -C gate-core/proofs
+
+      - name: Run Python tests
+        run: |
+          python -m pytest gate-tests/fw/ -v
+
+      - name: Run hardware tests
+        run: |
+          cd gate-core/rtl
+          make sim
+
+      - name: Build Rust tools
+        run: |
+          cd gate-sw
+          cargo build --release
+          cargo test
+
+  build-paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build LaTeX paper
+        run: |
+          sudo apt-get install -y texlive-latex-extra
+          cd gate-docs/paper
+          pdflatex main.tex
+          pdflatex main.tex
+        continue-on-error: true
