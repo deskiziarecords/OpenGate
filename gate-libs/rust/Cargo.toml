@@ -1,0 +1,29 @@
+[package]
+name = "open-gate"
+version = "0.1.0"
+edition = "2021"
+authors = ["OPEN GATE Project"]
+license = "MIT"
+description = "Orthographic-Pack Entropy Gateway"
+repository = "https://github.com/open-gate-project/open-gate"
+
+[dependencies]
+sha2 = "0.10"
+ed25519-dalek = "2.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[lib]
+name = "open_gate"
+path = "src/lib.rs"
+
+[[bin]]
+name = "og-pack"
+path = "src/bin/pack.rs"
+
+[[bin]]
+name = "og-entropy"
+path = "src/bin/entropy.rs"
+
+[[bin]]
+name = "og-validate"
+path = "src/bin/validate.rs"

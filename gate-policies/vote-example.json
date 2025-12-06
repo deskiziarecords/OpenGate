@@ -1,0 +1,18 @@
+{
+  "proposal": "Increase default Λ-budget from 300k to 350k pJ",
+  "author": "0xabc123...",
+  "timestamp": "2025-01-15T10:30:00Z",
+  "stake_required": 1000000,
+  "votes": {
+    "for": ["0xdef456...", "0x789abc..."],
+    "against": ["0x123def..."],
+    "abstain": []
+  },
+  "result": "passed",
+  "implementation_block": 19283746,
+  "certificate_template": {
+    "budget": 350000,
+    "hard_max": 1000000,
+    "epsilon": 50000
+  }
+}
