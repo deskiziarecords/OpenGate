@@ -13,7 +13,7 @@ Drop OPEN GATE between your tokenizer and your model and every letter that cross
 ### 2. Quick start (≤ 10 min)
 ```bash
 # Install host tools
-git clone https://github.com/open-gate-project/open-gate.git
+git clone https://github.com/OpenGate/open-gate.git
 cd open-gate/gate-sw
 cargo build --release
 sudo cp target/release/og-* /usr/local/bin
@@ -44,3 +44,7 @@ No self-referential paradox (Löb-safe)	stratified reflection proofs
     v0.4 Silicon shuttle (Sky130) – open MPW run
 
 Gate closed, entropy paid, alignment shipped.
+
+--------
+We provide the key for humanity, If you want to help the locksmith with some toys to keep creating
+<a href="https://www.buymeacoffee.com/hipotermiah" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
