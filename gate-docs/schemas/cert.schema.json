@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-gate.io/schemas/cert.schema.json",
+  "title": "OPEN GATE Certificate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["hash", "parent", "B", "A", "H", "ε", "flags", "mac"],
+  "properties": {
+    "hash":  { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "parent":{ "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "B":     { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+    "A":     { "type": "integer", "minimum": 0, "maximum": 255 },
+    "H":     { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+    "ε":     { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+    "flags": { "type": "integer", "minimum": 0, "maximum": 255 },
+    "mac":   { "type": "string", "pattern": "^[a-f0-9]{32}$" }
+  }
+}
