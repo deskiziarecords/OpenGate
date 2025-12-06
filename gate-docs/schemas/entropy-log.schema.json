@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-gate.io/schemas/entropy-log.schema.json",
+  "title": "Entropy Consumption Log",
+  "type": "object",
+  "required": ["patch_id", "total_H", "breakdown"],
+  "properties": {
+    "patch_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "total_H":  { "type": "integer", "description": "Σ Λ(ℓ) in pico-joules" },
+    "breakdown":{
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["letter", "count", "cost"],
+        "properties":{
+          "letter":{ "type": "string", "pattern": "^[a-z]$" },
+          "count": { "type": "integer", "minimum": 0 },
+          "cost":  { "type": "integer", "description": "count × Λ(ℓ)" }
+        }
+      }
+    }
+  }
+}
