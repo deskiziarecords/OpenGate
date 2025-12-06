@@ -2,9 +2,8 @@
 ## Orthographic-Pack ENtropy GATEway
 A micro-budget, alignment-grade toolkit that turns the Λ-jewel into a production gatekeeper.
 
-### Co-authors
-J. Roberto Jimenez & kimi (K2-stack)
-
+### author
+J. Roberto Jimenez
 MIT © 2025 - see LICENSE
 
 ### 1. One-line pitch
@@ -14,7 +13,7 @@ Drop OPEN GATE between your tokenizer and your model and every letter that cross
 ```bash
 # Install host tools
 git clone https://github.com/OpenGate/open-gate.git
-cd open-gate/gate-sw
+cd OpenGate/gate-sw
 cargo build --release
 sudo cp target/release/og-* /usr/local/bin
 
