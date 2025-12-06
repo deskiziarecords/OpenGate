@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-gate.io/schemas/side-channel.schema.json",
+  "title": "Side-Channel Leakage Report",
+  "type": "object",
+  "required": ["test_id", "date", "traces", "t_max", "i_max", "ε_bound"],
+  "properties": {
+    "test_id": { "type": "string", "pattern": "^[a-f0-9]{16}$" },
+    "date":    { "type": "string", "format": "date-time" },
+    "traces":  { "type": "integer", "minimum": 1000 },
+    "t_max":   { "type": "number", "description": "max t-statistic" },
+    "i_max":   { "type": "number", "description": "max mutual information (bits)" },
+    "ε_bound": { "type": "number", "description": "upper bound leakage (pJ)" }
+  }
+}
