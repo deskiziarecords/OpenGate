@@ -3,7 +3,7 @@
 A micro-budget, alignment-grade toolkit that turns the Λ-jewel into a production gatekeeper.
 
 ### author
-J. Roberto Jimenez + Compute Power
+J. Roberto Jimenez + KIMI (K2)
 MIT © 2025 - see LICENSE
 
 ### 1. One-line pitch
