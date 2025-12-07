@@ -24,7 +24,7 @@ og-entropy patch.bin
 Claim	Evidence
 Letter-level entropy cannot exceed certified budget	gate-core/proofs + M6 monitor
 Side-channel leakage bounded by ε (pJ)	TVLA + MASCOT reports
-Roll-back to last safe state < 2 ms	gate-core/rtl/rollback_mux.sv
+Roll-back to last safe state < 2 ms	gate-core/rtl/rollback_mux.svI
 No self-referential paradox (Löb-safe)	stratified reflection proofs
 4. Governance
 
